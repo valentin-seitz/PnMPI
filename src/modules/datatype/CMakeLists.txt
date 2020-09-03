@@ -27,6 +27,10 @@
 #
 # LLNL-CODE-402774
 
+if (NOT ENABLE_DEPRECATED_MODULES)
+  return()
+endif ()
+
 include(GNUInstallDirs)
 
 

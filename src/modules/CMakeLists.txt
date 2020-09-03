@@ -30,6 +30,8 @@
 # Modules will be built by default. However, one may disable building the
 # modules, e.g. if only the PnMPI infrastructure is required.
 option(ENABLE_MODULES "Selects whether PnMPI modules are built." TRUE)
+option(ENABLE_DEPRECATED_MODULES "Selects whether PnMPI modules with
+deprecated symbols are built." FALSE)
 if (NOT ENABLE_MODULES)
   return()
 endif ()
