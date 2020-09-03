@@ -192,6 +192,9 @@ if (CMAKE_Fortran_COMPILER_WORKS)
   target_link_libraries(pnmpif
     ${MPI_Fortran_LIBRARIES}
     -ldl)
+  if(MPI_Fortran_F77_HEADER_DIR)
+    target_include_directories(pnmpif PUBLIC ${MPI_Fortran_F77_HEADER_DIR})
+  endif()
 
   set_target_properties(pnmpif PROPERTIES VERSION
     ${PNMPI_VERSION_MAJOR}.${PNMPI_VERSION_MINOR}.${PNMPI_VERSION_PATCH}
