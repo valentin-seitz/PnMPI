@@ -115,7 +115,8 @@ static path_array_t parse_path(const char *path)
 
       path_array[pos] = strdup(start);
       pos++;
-      start = end + 1;
+      if (end)
+        start = end + 1;
     }
   while (end);
 
